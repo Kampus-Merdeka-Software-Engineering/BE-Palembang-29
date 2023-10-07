@@ -3,6 +3,6 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const sequelize = new Sequelize(process.env.MYSQL_CONNECTION_URL);
+const sequelize = new Sequelize(process.env.MYSQL_URL);
 
 export default sequelize;

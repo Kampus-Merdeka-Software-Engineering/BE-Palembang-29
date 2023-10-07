@@ -20,8 +20,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.raw());
 app.use(bodyParser.json());
 
-app.use(express.static("public"));
-app.use("/index", express.static("/public/index.html"));
+// app.use(express.static("public"));
+// app.use("/index", express.static("/public/index.html"));
 
 app.use(router);
 router.use("/api/users", usersRouter);
