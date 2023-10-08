@@ -23,14 +23,13 @@ app.use(bodyParser.json());
 const cors = require("cors");
 const corsOptions = {
   origin:
-    "https://kampus-merdeka-software-engineering.github.io/FE-Palembang-29/", // Ganti dengan alamat frontend Anda
+    "https://kampus-merdeka-software-engineering.github.io/FE-Palembang-29/",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
   optionsSuccessStatus: 200, // Beberapa browser memerlukan status 200
 };
 
 app.use(cors(corsOptions));
-
-app.use(express.static("public"));
-app.use("/index", express.static("/public/index.html"));
 
 app.use(router);
 router.use("/api/users", usersRouter);
