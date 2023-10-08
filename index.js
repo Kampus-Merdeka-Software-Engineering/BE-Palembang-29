@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import sequelize from "./config/sequelize.js";
 import { startSequelize } from "./utils/startSequelize.js";
+import cors from "cors";
 
 import "./models/index.js";
 import usersRouter from "./routes/users.js";
@@ -20,7 +21,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.raw());
 app.use(bodyParser.json());
 
-const cors = require("cors");
 const corsOptions = {
   origin:
     "https://kampus-merdeka-software-engineering.github.io/FE-Palembang-29/",
